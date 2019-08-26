@@ -204,7 +204,7 @@ exports.default = Page({
           picsnumber: res.data.pics.length,
           selectSizePrice: res.data.basicInfo.mini_price
         });
-        _wxParse2.default.wxParse('content', 'html', res.data.basicInfo.content, that, 5);
+        _wxParse2.default.wxParse('content', 'html', res.data.basicInfo.contents, that, 5);
         if (res.data.basicInfo.video) {
           that.getVideoUrl(res.data.basicInfo.video);
         }
