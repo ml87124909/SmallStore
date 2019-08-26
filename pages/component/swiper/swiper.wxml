@@ -1,0 +1,69 @@
+<page>
+  <template name="swiper">
+    <view class="swiper-container">
+      <swiper circular autoplay interval="6000" duration="500" bindchange="swiperChange" class="swiper">
+        <block wx:for="{{swiper}}" wx:key="unique">
+          <swiper-item>
+            <image src="{{item.pic_url}}" lazy-load="true" class="img" bindtap="tapBanner" data-id="{{item.business_id}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+        <block wx:for="{{swiper}}" wx:key="unique">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </view>
+  </template>
+  <template name="goodswiper">
+    <view wx:if="{{video}}" class="swiper-container">
+      <swiper circular interval="8000" duration="500" bindchange="swiperChange" class="swiper">
+        <swiper-item wx:if="{{video}}">
+          <video id="goodsVideo" src="{{video}}" show-fullscreen-btn="{{ false }}" direction="0" autoplay="{{ true }}" enable-progress-gesture="{{ false }}"></video>
+        </swiper-item>
+        <swiper-item wx:for="{{swiper}}" wx:key="unique">
+          <image lazy-load="true" src="{{item.pic}}" class="img" />
+        </swiper-item>
+      </swiper>
+      <view class="dots">
+        <view class="dots-current">
+          <block wx:for="{{swiper+1}}" wx:key="unique">
+            <text class="dot{{index == swiperCurrent? ' active':''}}">{{index + 1}}</text>
+          </block>
+          <text class="b">/{{number+1}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!video}}" class="swiper-container">
+      <swiper circular autoplay interval="8000" duration="500" bindchange="swiperChange" class="swiper">
+        <swiper-item wx:for="{{swiper}}" wx:key="unique">
+          <image lazy-load="true" src="{{item.pic}}" class="img" />
+        </swiper-item>
+      </swiper>
+      <view class="dots">
+        <view class="dots-current">
+          <block wx:for="{{swiper}}" wx:key="unique">
+            <text class="dot{{index == swiperCurrent? ' active':''}}">{{index + 1}}</text>
+          </block>
+          <text class="b">/{{number}}</text>
+        </view>
+      </view>
+    </view>
+  </template>
+  <template name="pingtuanswiper">
+    <view class="swiper-container">
+      <swiper circular autoplay interval="6000" duration="500" bindchange="swiperChange" class="swiper">
+        <block wx:for="{{swiper}}" wx:key="unique">
+          <swiper-item>
+            <image src="{{item.pic_url}}" lazy-load="true" class="img" bindtap="tapBanner" data-id="{{item.business_id}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+        <block wx:for="{{swiper}}" wx:key="unique">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </view>
+  </template>
+</page>

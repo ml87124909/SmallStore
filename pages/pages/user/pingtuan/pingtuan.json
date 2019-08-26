@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-nav-bar": "../../../../packages/touchui-wx-components/ui-nav-bar/dist/index",
+    "ui-count-down": "../../../../packages/touchui-wx-components/ui-count-down/dist/index"
+  }
+}
