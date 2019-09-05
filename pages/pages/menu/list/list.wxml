@@ -23,7 +23,7 @@
   <view style="height:{{NAV_HEIGHT}}px"></view>
   <view wx:if="{{categorieslist}}" style="background-color:#ffffff;border-bottom:1px solid #f5f5f5;position:fixed;z-index:99;">
     <ui-tabs index="{{ current }}" probe="1" bindchange="handleChange" _pid="{{_pid}}">
-      <ui-tab wx:for="{{categorieslist}}" wx:key="id" _pid="{{_pid}}">{{item.name}}</ui-tab>
+      <ui-tab wx:for="{{categorieslist}}" wx:key="id" _pid="{{_pid}}">{{item.cname}}</ui-tab>
     </ui-tabs>
   </view>
   <view wx:if="{{goods}}" class="goods-container">
@@ -70,7 +70,7 @@
           <text>{{item.introduce}}</text>
         </view>
       </view>
-      <view class="goods-title">{{item.name}}</view>
+      <view class="goods-title">{{item.cname}}</view>
       <view style="display:flex;">
         <view class="goods-price">Ұ{{item.mini_price}}</view>
         <view class="goods-original">¥{{item.original_price}}</view>

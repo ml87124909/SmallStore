@@ -351,7 +351,7 @@ exports.default = Page({
       if (!carShopBean.goods_childs || carShopBean.goods_childs == "") {
         _server2.default.get(_urls2.default.links[0].mlgoodsdet, { id: carShopBean.goods_id }).then(function (res) {
           doneNumber++;
-          if (res.data.basicInfo.status == '下架') {
+          if (res.data.basicInfo.status == '1') {
             wx.showModal({
               title: "\u4E0B\u67B6\u63D0\u793A",
               content: res.data.basicInfo.name + "\u5546\u54C1\u5DF2\u5931\u6548\uFF0C\u8BF7\u91CD\u65B0\u8D2D\u4E70",

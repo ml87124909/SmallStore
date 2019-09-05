@@ -26,7 +26,7 @@
   <template is="topgoods" data="{{topgoods:topgoods,goods:goods}}" />
   <view bindtap="getCouponsTap" class="coupons-icon {{couponsIcon ? 'coupons-icon-open':''}}">
     <image src="../../../images/coupons/coupons_icon.png" />
-    <view class="text">新年红包</view>
+    <view class="text">新客红包</view>
   </view>
   <ui-mask show="{{CouponsMask}}" custom-style="{{ customStyle }}" hide-on-tap="{{false}}" effect="scale-out" animation="" _pid="{{_pid}}">
     <view class="coupons-content">

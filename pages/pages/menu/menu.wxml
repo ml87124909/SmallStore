@@ -21,7 +21,7 @@
     <view wx:if="{{categories}}" class="menu-list ui-col ui-col-3" style="flex: 0 0 25%;">
       <view class="ui-col-content">
         <ui-v-tabs height="{{height}}" tab-style="{{tabStyle}}" active-tab-style="{{activeTabStyle}}" class="tab-item" index="{{current}}" data-key="current" _pid="{{_pid}}">
-          <ui-v-tab wx:for="{{categories}}" wx:key="id" bindtap="tabClick" data-id="{{item.id}}" data-name="{{item.name}}" _pid="{{_pid}}">{{item.name}}</ui-v-tab>
+          <ui-v-tab wx:for="{{categories}}" wx:key="id" bindtap="tabClick" data-id="{{item.id}}" data-name="{{item.cname}}" _pid="{{_pid}}">{{item.cname}}</ui-v-tab>
         </ui-v-tabs>
       </view>
     </view>
@@ -37,7 +37,7 @@
           <view class="goods-box">
             <view class="goods-list" wx:for="{{categorieslist}}" wx:key="id" bindtap="levelClick" data-id="{{item.id}}" data-name="{{item.pid_name}}" data-pid="{{item.pid}}">
               <image lazy-load="true" class="imgbox" src="{{item.pic_icon}}" />
-              <view class="small-title">{{item.name}}</view>
+              <view class="small-title">{{item.cname}}</view>
             </view>
           </view>
         </scroll-view>

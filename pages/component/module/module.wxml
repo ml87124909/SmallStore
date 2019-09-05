@@ -58,7 +58,7 @@
       <view class="ui-col" style="padding-left: 10px;padding-right: 10px;">
         <view class="ui-col-content">
           <view class="column-content">
-            <view class="column-goods-title over">{{goodsDetail.basicInfo.name}}</view>
+            <view class="column-goods-title over">{{goodsDetail.basicInfo.cname}}</view>
             <view class="column-goods-risti" wx:if="{goodsDetail.basicInfo.introduce}}">{{goodsDetail.basicInfo.introduce}}</view>
           </view>
         </view>
@@ -239,7 +239,7 @@
       </view>
       <view class="goods-list" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
         <image src="{{item.pic}}" lazy-load="true" />
-        <view class="goods-list-title">{{item.name}}</view>
+        <view class="goods-list-title">{{item.cname}}</view>
         <view class="goods-list-info-box">
           <view class="goods-list-money">Ұ{{item.mini_price}}</view>
           <view class="goods-list-order">已售{{item.orders}}</view>
@@ -318,7 +318,7 @@
             <text>{{item.introduce}}</text>
           </view>
         </view>
-        <view class="goods-title">{{item.name}}</view>
+        <view class="goods-title">{{item.cname}}</view>
         <view class="goods-price-box">
           <view class="goods-price">Ұ{{item.mini_price}}</view>
           <view class="goods-price-naver">已售{{item.orders}}</view>
@@ -456,6 +456,7 @@
     <!-- 重要提示：请勿擅自隐藏、删除、修改底部版权信息，一经发现将不在提供任何技术支持服务 -->
     <view class="sample_power"><i></i></view>
   </template>
+  
   <template name="hcategory">
     <view class="category" wx:for="{{category}}" wx:key="id">
       <view class="imageBox" bindtap="getMenuListTap" data-id="{{item.id}}" data-pid="{{item.pid}}" data-name="{{item.pid_name}}">
@@ -465,7 +466,7 @@
         <view class="goods" wx:for="{{categoryGoods[item.id][0]}}" wx:for-item="item2" wx:key="id" bindtap="toDetailsTap" data-id="{{item2.id}}">
           <image src="{{item2.pic}}" lazy-load="true" />
           <view class="infoBox">
-            <view class="name">{{item2.name}}</view>
+            <view class="name">{{item2.cname}}</view>
             <view class="price">¥{{item2.mini_price}}</view>
           </view>
         </view>

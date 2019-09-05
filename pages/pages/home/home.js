@@ -30,13 +30,13 @@ exports.default = Page({
   },
   onLoad: function onLoad() {
     var that = this;
-    //轮播幻灯片
+    //首页轮播幻灯片
     _server2.default.get(_urls2.default.links[0].imgsbanner, { type: 'home' }).then(function (res) {
       if (res.code == 0) {
         that.setData({ home: res.data });
       }
     });
-    //分类菜单
+    //首页banner分类菜单
     _server2.default.get(_urls2.default.links[0].imgsbanner, { type: 'menu' }).then(function (res) {
       if (res.code == 0) {
         that.setData({ sale: res.data });
@@ -44,9 +44,9 @@ exports.default = Page({
     });
     //获取推荐拼团商品
     _server2.default.get(_urls2.default.links[0].recptgoods, {}).then(function (res) {
-      that.setData({
-        ptGoodsList: res.data
-      });
+      if (res.code == 0) {
+      that.setData({ptGoodsList: res.data});
+      }
     });
     //专题板块
     wx.nextTick(function () {

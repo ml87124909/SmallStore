@@ -43,7 +43,7 @@ exports.default = Page({
         _server2.default.get(_urls2.default.links[0].mlcategory, { level: 1 }).then(function (res) {
             if (res.code == 0) {
                 wx.hideLoading();
-                var categories = [{ id: 0, name: "\u6240\u6709\u5206\u7C7B" }];
+                var categories = [{ id: 0, cname: "\u6240\u6709\u5206\u7C7B" }];
                 for (var i = 0; i < res.data.length; i++) {
                     categories.push(res.data[i]);
                 }
@@ -51,8 +51,8 @@ exports.default = Page({
                 that.getGoodsList(0);
             }
         });
-        //商品轮播广告
-        _server2.default.get(_urls2.default.links[0].imgsbanner, { type: 'goods' }).then(function (res) {
+        //商品分类页轮播广告
+        _server2.default.get(_urls2.default.links[0].imgsbanner, { field: 'goods' }).then(function (res) {
             if (res.code == 0) {
                 that.setData({ menu: res.data });
             }

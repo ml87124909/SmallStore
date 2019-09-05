@@ -147,7 +147,7 @@
                     </view>
                 </block>
             </view>
-            <ui-fixed-view wx:if="{{goodsDetail.basicInfo.status == '上架'}}" bottom="0" left="0" right="0" _pid="{{_pid}}">
+            <ui-fixed-view wx:if="{{goodsDetail.basicInfo.status == '0'}}" bottom="0" left="0" right="0" _pid="{{_pid}}">
                 <view class="fixed_bottom fixed_bottom_popup {{iphonex?'iphonexBottom':''}} ui-row" style="height:50px;">
                     <view wx:if="{{shopType=='fPingtuan'}}" class="ui-col valign-middle" style=""><view class="ui-col-content valign-middle">
                         <view class="form_list_buy" bindtap="fPingtuan">发起拼团</view>

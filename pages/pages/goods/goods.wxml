@@ -36,7 +36,7 @@
       </view>
       <view class="ui-col ui-col-align-center align-center valign-middle" style="">
         <view class="ui-col-content align-center valign-middle">
-          <view class="goods-tabbar-title">{{goodsDetail.basicInfo.name}}</view>
+          <view class="goods-tabbar-title">{{goodsDetail.basicInfo.cname}}</view>
         </view>
       </view>
       <view class="ui-col ui-col-align-center align-center valign-middle" style="flex:0 0 60px;">
@@ -130,7 +130,7 @@
           </view>
         </view>
       </view>
-      <block wx:if="{{goodsDetail.basicInfo.status == '下架'}}">
+      <block wx:if="{{goodsDetail.basicInfo.status == '1'}}">
         <ui-fixed-view bottom="0" left="0" right="0" _pid="{{_pid}}">
           <view class="fixed_bottom {{iphonex?'iphonexBottom':''}} ui-row" bindtap="gethomeTap" style="height:50px;">
             <view class="fixed_bottom_ui-col fixed_bottom_down ui-col ui-col-align-center align-center valign-middle" style="padding-right: 1px;"><view class="ui-col-content align-center valign-middle">
@@ -199,14 +199,14 @@
         </ui-fixed-view>
       </block>
       <view class="position-button-box">
-        <view wx:if="{{goodsDetail.shareInfo.share_type != 0 && shareTips == true && goodsDetail.basicInfo.status == '上架'}}" class="share-tips">
+        <view wx:if="{{goodsDetail.shareInfo.share_type != 0 && shareTips == true && goodsDetail.basicInfo.status == '0'}}" class="share-tips">
           <view class="tips-text">分享得好礼</view>
           <view class="arrow"></view>
           <view class="arrow arrow-border"></view>
           <view class="arrow arrow-bg"></view>
         </view>
         <!-- 分享按钮 -->
-        <view wx:if="{{goodsDetail.basicInfo.status == '上架'}}" class="share-button" bindtap="getshareboxTap">
+        <view wx:if="{{goodsDetail.basicInfo.status == '0'}}" class="share-button" bindtap="getshareboxTap">
           <image src="../../../images/share.png"/>
         </view>
         <!-- 回首页按钮 -->
@@ -218,7 +218,7 @@
           <image src="../../../images/top.png"/>
         </view>
       </view>
-      <!-- 规格弹窗 -->
+      <!-- 规格弹窗-->
       <ui-popup show="{{ show }}" position="bottom" _pid="{{_pid}}">
         <view class="ui-row" style="height:100px;">
           <view class="ui-col ui-col-3 ui-col-align-center align-center valign-middle" style="flex: 0 0 25%;"><view class="ui-col-content align-center valign-middle">
@@ -229,7 +229,7 @@
           </view></view>
           <view class="ui-col ui-col-align-center align-center valign-middle" style=""><view class="ui-col-content align-center valign-middle">
             <view class="pop-goods-des">
-              <view class="pop-goods-title">{{goodsDetail.basicInfo.name}}</view>
+              <view class="pop-goods-title">{{goodsDetail.basicInfo.cname}}</view>
               <block wx:if="{{shopType!='fPingtuan' && shopType!='cPingtuan'}}">
                 <view class="pop-goods-price">¥{{selectSizePrice}} 
                   <text wx:if="{{propertyChildStore == null}}">库存:{{goodsDetail.basicInfo.stores}}</text>
@@ -276,7 +276,7 @@
             </view>
           </block>
         </view>
-        <ui-fixed-view wx:if="{{goodsDetail.basicInfo.status == '上架'}}" bottom="0" left="0" right="0" _pid="{{_pid}}">
+        <ui-fixed-view wx:if="{{goodsDetail.basicInfo.status == '0'}}" bottom="0" left="0" right="0" _pid="{{_pid}}">
           <view class="fixed_bottom fixed_bottom_popup {{iphonex?'iphonexBottom':''}} ui-row" style="height:50px;">
             <view wx:if="{{shopType=='addShopCar'}}" class="ui-col valign-middle" style=""><view class="ui-col-content valign-middle">
               <view class="form_list_buy" bindtap="addShopCar">加入购物车</view>
