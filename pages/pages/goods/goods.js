@@ -204,6 +204,7 @@ exports.default = Page({
           picsnumber: res.data.pics.length,
           selectSizePrice: res.data.basicInfo.mini_price
         });
+        console.log(res.data.basicInfo.contents)
         _wxParse2.default.wxParse('content', 'html', res.data.basicInfo.contents, that, 5);
         if (res.data.basicInfo.video) {
           that.getVideoUrl(res.data.basicInfo.video);
@@ -478,9 +479,13 @@ exports.default = Page({
       var ctxs = wx.createCanvasContext('shareCanvas');
       wx.showLoading({ title: '正在准备生成' });
       //下载商品海报
-      console.log(data.basicInfo.pic);
+      //console.log(data.basicInfo.pic);
+      var basPic = data.basicInfo.pic
+      if (basPic.search("https:") == -1) {
+        var basPic = basPic.replace(/http:/g, 'https:'); //商品图片
+      }
       wx.downloadFile({
-        url: data.basicInfo.pic,
+        url: basPic,
         success: function success(pic) {
           if (pic.statusCode === 200) {
             //商品海报图片
