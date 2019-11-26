@@ -1,6 +1,6 @@
 # SmallStore
 
-![SmallStore+][2]
+![SmallStore+][1]
 
 
 ## 说明
@@ -54,3 +54,9 @@
 > 在不贡献代码、功能、小程序模板的情况下，只要不是将代码直接销售获利，不禁止任何形式的使用、修改、发布、分发该软件。
 
 > 在贡献代码、功能、小程序模板的前提,并得到我确认下的情况下，您可以为所欲为。
+
+
+
+
+  
+  [1]: https://github.com/mn3711698/SmallStore/blob/master/smallstore.jpg
