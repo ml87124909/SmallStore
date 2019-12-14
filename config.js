@@ -3,8 +3,8 @@
 var config = {
   'version': '1.4.7',
   //版本标识，不用管
-  //'suburl': 'https://wxmall.janedao.cn/api/1?viewid=home',
-  'suburl': 'http://127.0.0.1:5000/api/1?viewid=home',
+  'suburl': 'https://small.yjyzj.cn/api/1?viewid=home',
+  //'suburl': 'http://127.0.0.1:5000/api/1?viewid=home',
   //suburl在码力小店后台首页——>基本信息
   'mapkey': 'DNTBZ-JZRC4-AB7US-XWO2R-KUVSZ-HVBQG',
   //mapkey请自己到腾讯地图开放平台申请：https://lbs.qq.com/
