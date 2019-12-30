@@ -59,4 +59,4 @@
 
 
   
-  [1]: https://github.com/mn3711698/SmallStore/blob/master/smallstore.jpg
+  [1]: https://github.com/mn3711698/MaliStore/blob/master/1.jpg
